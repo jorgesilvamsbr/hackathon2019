@@ -24,3 +24,13 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.title-md,
+.text-center {
+  text-align: center !important;
+}
+
+.menu-button {
+  position: relative;
+  top: 24px;
+}

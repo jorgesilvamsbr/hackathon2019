@@ -1,10 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      MARI
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content color="tertiary">
   <div class="ion-padding">
-    <ion-button expand="block" color="primary">Pedir ajuda!</ion-button>
+    <p class="text-center">
+      Use o botão para pedir ajuda!
+    </p>
+    <ion-button size="large" expand="block" color="primary">Pedir ajuda!</ion-button>
   </div>
-  <ion-button [routerLink]="'/lista-de-pessoas-confiaveis'">Pessoas confiáveis</ion-button>
-  <ion-button (click)="comecarAOuvir()">Começar a ouvir</ion-button>
-  <ion-button (click)="pararDeOuvir()">Parar de ouvir</ion-button>
+
+  <div class="ion-padding">
+    <ion-button expand="block" color="primary" [routerLink]="'/lista-de-pessoas-confiaveis'">Pessoas confiáveis</ion-button>
+    <ion-button expand="block" color="primary" (click)="comecarAOuvir()">Começar a ouvir</ion-button>
+    <ion-button expand="block" color="primary" (click)="pararDeOuvir()">Parar de ouvir</ion-button>
+  </div>
+
   <ion-card>
     <ion-card-header>Áudios gravados</ion-card-header>
     <ion-card-content>
