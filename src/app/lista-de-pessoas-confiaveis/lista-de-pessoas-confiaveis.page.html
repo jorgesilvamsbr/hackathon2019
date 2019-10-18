@@ -1,10 +1,16 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar class="ion-text-center" color="primary">
     <ion-title>Pessoas Confiáveis</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content color="tertiary">
+  <div class="ion-action-content">
+    <ion-button mode="md" expand="block" color="primary">
+      <ion-icon name="add" slot="start"></ion-icon> Adicionar pessoa
+    </ion-button>
+  </div>
+
   <ion-card *ngFor="let pessoa of pessoasConfiaveis; let i = index">
     <ion-card-header color="light">
       <ion-row nowrap>
