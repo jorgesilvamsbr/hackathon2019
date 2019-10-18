@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SpeechRecognition } from '@ionic-native/speech-recognition/ngx';
+import { SMS } from '@ionic-native/sms/ngx';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +10,9 @@ import { SpeechRecognition } from '@ionic-native/speech-recognition/ngx';
 export class HomePage {
   audiosCapturados: String[];
 
-  constructor(private speechRecognition: SpeechRecognition) {
-
+  constructor(private speechRecognition: SpeechRecognition, private sms: SMS) {
+    this.pedirPermissaoParaOuvir();
+    this.comecarAOuvir();
   }
 
   pedirPermissaoParaOuvir(){
@@ -30,10 +32,19 @@ export class HomePage {
       match: 1000
 
     }
+    let precisouDeAjuda = false;
     this.speechRecognition.startListening(options)
     .subscribe((audiosCapturados: Array<string>) => {
       this.audiosCapturados = audiosCapturados;
-      console.log(audiosCapturados);
+      audiosCapturados.forEach((audio) => {
+        if(audio.search('socorro') > 0 && audio.search('abacaxi') > 0) {
+          this.sms.send('67981090424', 'Socorro! Estou sendo agredida pode me ajudar?', {android: {intent: ''}});
+          return;
+        }
+        if(precisouDeAjuda) {
+          return;
+        }
+      })
     });
   }
 
