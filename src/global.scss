@@ -29,7 +29,31 @@
   padding: 16px 8px 8px;
 }
 
+.ion-content-vertical-center .ion-content-vertical {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
 .menu-button {
   position: relative;
   top: 24px;
+}
+
+.btn-panic {
+  position: relative;
+  font-size: 26px;
+  height: 4em;
+  animation: panic .4s ease infinite alternate;
+}
+
+@keyframes panic {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: scale(1.04);
+  }
 }
