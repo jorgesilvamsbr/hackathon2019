@@ -25,16 +25,16 @@ export class ListaDePessoasConfiaveisPage implements OnInit {
 
   pessoasConfiaveis = [
     {
-      nome: "Noberta Alves Santos",
-      telefone: "67 99191-8989"
+      nome: "Jorge Silva",
+      telefone: "+55 (67) 98109-0424"
     },
     {
-      nome: "Fernando Neto Luís",
-      telefone: "67 98989-5544"
+      nome: "Davi Alvarenga",
+      telefone: "+55 (67) 99196-6088"
     },
     {
-      nome: "Gabriela Giovanna Garcia",
-      telefone: "67 98454-4152"
+      nome: "Stefano dos Santos",
+      telefone: "+55 (67) 98137-9808"
     }
   ]
 }

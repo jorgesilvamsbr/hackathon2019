@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SpeechRecognition } from '@ionic-native/speech-recognition/ngx';
 import { SMS } from '@ionic-native/sms/ngx';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -10,9 +11,17 @@ import { SMS } from '@ionic-native/sms/ngx';
 export class HomePage {
   audiosCapturados: String[];
 
-  constructor(private speechRecognition: SpeechRecognition, private sms: SMS) {
+  constructor(private speechRecognition: SpeechRecognition, private sms: SMS, public toastController: ToastController) {
     this.pedirPermissaoParaOuvir();
     this.comecarAOuvir();
+  }
+
+  async presentToast() {
+    const toast = await this.toastController.create({
+      message: 'Seu pedido foi enviado!',
+      duration: 6000
+    });
+    toast.present();
   }
 
   pedirPermissaoParaOuvir(){
