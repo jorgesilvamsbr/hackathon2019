@@ -1,5 +1,7 @@
 {
   "name": "mari",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

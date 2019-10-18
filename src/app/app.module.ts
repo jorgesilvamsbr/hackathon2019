@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { AcoesPessoasConfiaveisComponent } from './acoes-pessoas-confiaveis/acoes-pessoas-confiaveis.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { SpeechRecognition } from '@ionic-native/speech-recognition/ngx';
+
 @NgModule({
   declarations: [AppComponent, AcoesPessoasConfiaveisComponent],
   entryComponents: [AcoesPessoasConfiaveisComponent],
@@ -17,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     StatusBar,
     SplashScreen,
+    SpeechRecognition,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
