@@ -1,3 +1,28 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-buttons class="menu-button" slot="start">
+    <ion-menu-button color="light"></ion-menu-button>
+  </ion-buttons>
+
+  <ion-menu side="start" contentId="content" menuId="menu">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item button [routerLink]="'/'" (click)="fechaMenu()">
+          Início
+        </ion-item>
+        <ion-item button [routerLink]="'/lista-de-pessoas-confiaveis'" (click)="fechaMenu()">
+          Pessoas Confiáveis
+        </ion-item>
+        <ion-item button [routerLink]="'/gatilhos'" (click)="fechaMenu()">
+          Gatilhos
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="content" main></ion-router-outlet>
 </ion-app>

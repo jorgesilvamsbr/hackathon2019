@@ -1,19 +1,25 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="ion-text-center" color="primary">
     <ion-title>Pessoas Confiáveis</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="tertiary">
+  <div class="ion-padding">
+    <ion-button mode="md" expand="block" color="primary">
+      <ion-icon name="add" slot="start"></ion-icon> Adicionar pessoa
+    </ion-button>
+  </div>
+
   <ion-card *ngFor="let pessoa of pessoasConfiaveis; let i = index">
-    <ion-card-header>
+    <ion-card-header color="light">
       <ion-row nowrap>
         <ion-col>
           <ion-card-subtitle>#{{i + 1}}</ion-card-subtitle>
-          <ion-card-title item-left>{{pessoa.nome}}</ion-card-title>
+          <ion-card-title mode="md" item-left>{{pessoa.nome}}</ion-card-title>
         </ion-col>
-        <ion-col size="auto">
-          <ion-button (click)="presentPopover()" size="small" fill="clear">
+        <ion-col size="2" align-self-end>
+          <ion-button (click)="presentPopover()" fill="clear">
             <ion-icon slot="icon-only" name="more"></ion-icon>
           </ion-button>
         </ion-col>
@@ -21,12 +27,9 @@
     </ion-card-header>
     <ion-item-group>
       <ion-item>
-        <ion-icon name="call" slot="start"></ion-icon>
-        <ion-label>{{pessoa.telefone}}</ion-label>
-      </ion-item>
-      <ion-item href="#" class="activated" color="primary">
-        <ion-icon name="warning" slot="start"></ion-icon>
-        <ion-label>Pedir ajuda!</ion-label>
+        <ion-label color="primary">
+          <ion-icon name="call" slot="start"></ion-icon> {{pessoa.telefone}}
+        </ion-label>
       </ion-item>
     </ion-item-group>
   </ion-card>

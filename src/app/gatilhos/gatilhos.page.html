@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary">
+    <ion-title>Gatilhos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="tertiary">
+  <div class="ion-padding">
+    <ion-button [routerLink]="'/adicionar-gatilho'" mode="md" expand="block" color="primary">
+      <ion-icon name="add" slot="start"></ion-icon> Adicionar gatilho
+    </ion-button>
+  </div>
+
+  <ion-card>
+    <ion-card-header color="light">
+      <ion-row nowrap>
+        <ion-col>
+          <ion-card-subtitle>#1</ion-card-subtitle>
+          <ion-card-title mode="md" item-left>Socorro Mari!</ion-card-title>
+        </ion-col>
+        <ion-col size="2" align-self-end>
+          <ion-button (click)="presentPopover()" fill="clear">
+            <ion-icon slot="icon-only" name="more"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
