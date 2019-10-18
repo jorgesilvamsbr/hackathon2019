@@ -1,14 +1,22 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Mari
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-button (click)="comecarAOuvir()">Começar a ouvir</ion-button>
+  <ion-button (click)="pararDeOuvir()">Parar de ouvir</ion-button>
+  <ion-card>
+    <ion-card-header>Áudios gravados</ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let audio of audiosCapturados">
+          {{ audio }}
+        </ion-item>
+      </ion-list>  
+    </ion-card-content>
+  </ion-card>
 </ion-content>
