@@ -1,13 +1,14 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header >
+  <ion-toolbar color="primary">
     <ion-title>
       MAR!
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+
+<ion-content color="tertiary">
   <div class="ion-padding">
-    Content
+    <ion-button expand="block" color="primary">Pedir ajuda!</ion-button>
   </div>
   <ion-button [routerLink]="'/lista-de-pessoas-confiaveis'">Pessoas confiáveis</ion-button>
   <ion-button (click)="comecarAOuvir()">Começar a ouvir</ion-button>
