@@ -27,7 +27,7 @@ export class AppComponent {
     });
   }
 
-  openMenu() {
+  abreMenu() {
     this.menu.open('menu');
   }
 }

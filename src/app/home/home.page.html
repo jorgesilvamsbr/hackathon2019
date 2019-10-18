@@ -1,16 +1,9 @@
-<ion-header >
-  <ion-toolbar color="primary">
-    <ion-title>
-      MAR!
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content color="tertiary">
   <div class="ion-padding">
     <ion-button expand="block" color="primary">Pedir ajuda!</ion-button>
   </div>
   <ion-button [routerLink]="'/lista-de-pessoas-confiaveis'">Pessoas confiáveis</ion-button>
+  <ion-button (click)="openMenu()">Abre menu carai</ion-button>
   <ion-button (click)="comecarAOuvir()">Começar a ouvir</ion-button>
   <ion-button (click)="pararDeOuvir()">Parar de ouvir</ion-button>
   <ion-card>
