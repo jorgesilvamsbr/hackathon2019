@@ -30,4 +30,7 @@ export class AppComponent {
   abreMenu() {
     this.menu.open('menu');
   }
+  fechaMenu() {
+    this.menu.close();
+  }
 }
