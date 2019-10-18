@@ -37,7 +37,7 @@ export class HomePage {
     .subscribe((audiosCapturados: Array<string>) => {
       this.audiosCapturados = audiosCapturados;
       audiosCapturados.forEach((audio) => {
-        if(audio.search('socorro') > 0 && audio.search('abacaxi') > 0) {
+        if(audio.toLocaleLowerCase().search('socorro') > 0 && audio.toLocaleLowerCase().search('abacaxi') > 0) {
           this.sms.send('67981090424', 'Socorro! Estou sendo agredida pode me ajudar?', {android: {intent: ''}});
           return;
         }
