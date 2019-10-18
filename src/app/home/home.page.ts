@@ -16,7 +16,7 @@ export class HomePage {
         this.speechRecognition.requestPermission();
     });
   }
-  
+
   comecarAOuvir(){
     let options = {
       language: 'pt-BR'
