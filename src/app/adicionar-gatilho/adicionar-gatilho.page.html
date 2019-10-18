@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary">
+    <ion-title>Adicionar gatilho</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="tertiary">
+  <div class="ion-padding">
+    <ion-button mode="md" expand="block" color="primary" (click)="comecarAOuvir()">Começar a ouvir</ion-button>
+    <ion-button mode="md" expand="block" color="primary" (click)="pararDeOuvir()">Parar de ouvir</ion-button>
+  </div>
+
+  <ion-card>
+    <ion-card-header>Áudios gravados</ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let audio of audiosCapturados">
+          {{ audio }}
+        </ion-item>
+      </ion-list>  
+    </ion-card-content>
+  </ion-card>
+</ion-content>
