@@ -5,9 +5,21 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
   <div class="ion-padding">
     Content
   </div>
+  <ion-button [routerLink]="'/lista-de-pessoas-confiaveis'">Pessoas confiáveis</ion-button>
+  <ion-button (click)="comecarAOuvir()">Começar a ouvir</ion-button>
+  <ion-button (click)="pararDeOuvir()">Parar de ouvir</ion-button>
+  <ion-card>
+    <ion-card-header>Áudios gravados</ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let audio of audiosCapturados">
+          {{ audio }}
+        </ion-item>
+      </ion-list>  
+    </ion-card-content>
+  </ion-card>
 </ion-content>

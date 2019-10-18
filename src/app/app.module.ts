@@ -7,15 +7,19 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
+import { AcoesPessoasConfiaveisComponent } from './acoes-pessoas-confiaveis/acoes-pessoas-confiaveis.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { SpeechRecognition } from '@ionic-native/speech-recognition/ngx';
+
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, AcoesPessoasConfiaveisComponent],
+  entryComponents: [AcoesPessoasConfiaveisComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,
     SplashScreen,
+    SpeechRecognition,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
